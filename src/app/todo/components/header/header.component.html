@@ -1,0 +1,19 @@
+<div class="header" role="banner">
+  <div>
+    <a routerLink="/">Best ToDo App</a>
+  </div>
+  <label>
+    <select
+      class="select-language"
+      #selectedLang
+      (change)="switchLang(selectedLang.value)">
+      <option *ngFor="let language of translatesService.getLangs()"
+              [value]="language"
+              [selected]="language === translatesService.currentLang">
+        {{ language }}
+      </option>
+    </select>
+  </label>
+</div>
+
+<app-loader *ngIf="(todoService.isLoading$ | async).length"></app-loader>

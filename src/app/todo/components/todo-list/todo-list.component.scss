@@ -1,0 +1,81 @@
+.todos {
+  max-width: 512px;
+  margin: 150px auto;
+  text-align: center;
+}
+
+.counter {
+  font-size: 2.25rem;
+  margin: 0.75rem;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: #337ab7;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  color: #eee;
+  margin: 0.5rem 0.25rem;
+  cursor: pointer;
+  user-select: none;
+  width: 40px;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+
+  &:active {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5) inset;
+  }
+
+  &.danger {
+    background: #d9534f;
+  }
+
+  &.success {
+    background: #288d32;
+  }
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item + .item {
+  border-top: 1px dashed rgba(0, 0, 0, 0.5);
+}
+
+.text {
+  flex: 1;
+  font-size: 1.15rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background: #eee;
+  border-radius: 4px;
+
+  &.complete {
+    text-decoration: line-through;
+  }
+}
+
+.create-todo {
+  border-radius: 50%;
+  background-color: seagreen;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  color: white;
+  font-size: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  align-self: center;
+  left: calc(50% - 40px);
+}

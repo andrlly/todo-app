@@ -1,0 +1,18 @@
+<div class="creation-task">
+  <h1>
+    {{ "CREATE_TASK" | translate }}
+  </h1>
+  <div class="goToList">
+    <a routerLink="/">&#8592; {{ "GO_TO_LIST" | translate }}</a>
+  </div>
+  <form class="form">
+    <input
+      type="text"
+      class="input"
+      [placeholder]="'TAP_TASK' | translate"
+      required
+      [formControl]="title"
+    >
+    <button class="btn" (click)="addTask()">{{ "ADD" | translate }}</button>
+  </form>
+</div>

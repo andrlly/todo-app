@@ -1,0 +1,5 @@
+  <label>{{ "SEARCH" | translate }}</label>
+  <input type="text" class="input" [(ngModel)]="searchValue">
+  <button *ngIf="searchValue" aria-label="Clear" (click)="searchValue=''">
+    &#x2717;
+  </button>

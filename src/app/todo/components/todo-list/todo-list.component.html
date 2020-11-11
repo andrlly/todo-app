@@ -1,0 +1,33 @@
+<div id="todos" class="todos">
+  <h1 class="counter" *ngIf="(todos$ | async)">
+    {{ (todos$ | async).length }} {{ 'TODOS_LEFT' | translate }}
+  </h1>
+
+  <h1 class="counter" *ngIf="(todos$ | async) &&!(todos$ | async).length">
+       {{ 'NO_TODOS' | translate }}
+  </h1>
+
+  <app-sort-by
+    [todos]="todos$ | async"
+  ></app-sort-by>
+
+  <app-search #searchComponent></app-search>
+  <ul id="list" class="list">
+    <li *ngFor="let todo of todos$ | async | search: searchComponent.searchValue: 'title'"
+      class="item"
+      id="{{todo.id}}"
+    >
+      <span class="text" [class.complete]="todo.isCompleted">
+        {{todo.title}}
+      </span>
+      <button class="btn success" (click)="completeTodo(todo)">
+        &#x2714;
+      </button>
+      <button class="btn danger" (click)="removeTodo(todo)">
+        &#x2717;
+      </button>
+    </li>
+  </ul>
+
+  <div class="create-todo" routerLink="/create" routerLinkActive="activebutton">+</div>
+</div>

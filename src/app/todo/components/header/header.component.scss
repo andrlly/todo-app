@@ -1,0 +1,35 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  color: white;
+  font-weight: 600;
+  margin: 0 200px;
+}
+
+.select-language {
+  width: 50px;
+  margin: 0 40px;
+}
+
+@media (max-width: 790px) {
+  .select-language {
+    margin: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,6 @@
+<div>{{ 'SORT_BY' | translate }}</div>
+<div class="sort" (click)="onSortToggle($event)">
+  <div [appSort]="todos" class="icon" role="button" data-order="asc" data-name="title">
+    <button class="btn icon">></button>
+  </div>
+</div>

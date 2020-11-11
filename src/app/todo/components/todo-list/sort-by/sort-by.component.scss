@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  align-items: center;
+}
+
+.sort {
+  position: relative;
+  width: 50px;
+  .icon {
+    cursor: pointer;
+    transform: rotate(45deg);
+    font-size: 20px;
+    padding: 5px 7px;
+    &.up {
+      transform: rotate(225deg);
+    }
+  }
+}
